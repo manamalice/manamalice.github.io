@@ -5,6 +5,8 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <link rel="icon" type="image/x-icon" href="miffyicon.jpg">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<body>
 <style>
 img {
   display: block;
@@ -23,16 +25,36 @@ p    {
     color:rgb(130, 104, 84);
     text-align: center;}
     .w3-bar-block .w3-bar-item {padding:20px}
-.sidebar{height:50%;width:100px;background-color:#f5e8d6;position:fixed!important;z-index:1;overflow:auto}
+.color,.hover-color:hover{color:#ffffff!important;background-color:#e5d9b4!important}
 </style>
 </head>
 <body>
-<nav class="sidebar" style="display:none;z-index:2;width:40%;min-width:300px">
-  <a href="javascript:void(0)" onclick="close()"
-  >Close</a>
-  <a href="#silly" onclick="close()" >silly</a>
-  <a href="#goofy" onclick="close()" >goofy</a>
-</nav>
+<!-- Sidebar -->
+<div class="w3-sidebar w3-bar-block w3-border-right" style="display:none" id="mySidebar">
+  <button onclick="w3_close()" class="w3-bar-item w3-large">Close &times;</button>
+  <a href="#" class="w3-bar-item w3-button">About Me</a>
+  <a href="#" class="w3-bar-item w3-button">Silly Pictures</a>
+  <a href="#" class="w3-bar-item w3-button">Goofy?</a>
+</div>
+
+<!-- Page Content -->
+<div class="color">
+  <button class="w3-button color w3-xlarge" onclick="w3_open()">☰</button>
+  <div class="w3-container">
+    <h1>My Page</h1>
+  </div>
+</div>
+
+
+<script>
+function w3_open() {
+  document.getElementById("mySidebar").style.display = "block";
+}
+
+function w3_close() {
+  document.getElementById("mySidebar").style.display = "none";
+}
+</script>  
 <h1>Haiiii XD</h1>
 <p>welcome to my website!!</p>
 <br>
